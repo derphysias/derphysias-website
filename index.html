@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MK Physiotherapie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,29 +11,30 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* Verhindert "Bouncen" beim Scrollen über die Ränder auf iOS */
+            overscroll-behavior-y: none; 
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-black text-white py-6 px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+<body class="bg-gray-100 min-h-screen flex flex-col w-full overflow-x-hidden">
+    
+    <header class="bg-black text-white py-6 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-4xl font-bold">MK</div>
-            <nav class="flex gap-8">
-                <a href="index.html" class="hover:opacity-80">PHYSIOTHERAPIE</a>
-                <a href="kontakt.html" class="hover:opacity-80">KONTAKT</a>
-                <a href="infos.html" class="hover:opacity-80">INFORMATION</a>
+            
+            <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base">
+                <a href="index.html" class="hover:opacity-80 transition-opacity">PHYSIOTHERAPIE</a>
+                <a href="kontakt.html" class="hover:opacity-80 transition-opacity">KONTAKT</a>
+                <a href="infos.html" class="hover:opacity-80 transition-opacity">INFORMATION</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow py-12 px-4">
+    <main class="flex-grow py-8 md:py-12 px-4">
         <div class="max-w-4xl mx-auto space-y-8">
-            <!-- Physiotherapie Section -->
-            <div class="bg-white border border-black rounded-lg p-8 text-center">
-                <h1 class="text-4xl font-bold mb-6">Physiotherapie</h1>
-                <div class="space-y-4 text-gray-800">
+            <div class="bg-white border border-black rounded-lg p-6 md:p-8 text-center shadow-sm">
+                <h1 class="text-3xl md:text-4xl font-bold mb-6">Physiotherapie</h1>
+                <div class="space-y-4 text-gray-800 text-sm md:text-base leading-relaxed">
                     <p>
                         In meiner Praxis biete ich eine umfassende physiotherapeutische Behandlung an, die verschiedene Behandlungskonzepte und Techniken kombiniert.
                     </p>
@@ -43,38 +44,33 @@
                 </div>
             </div>
 
-            <!-- Portrait Photo -->
             <div class="flex justify-center my-8">
-                <img src="portrait.jpg" alt="Matthias Kriegleder" class="w-48 h-48 rounded-full object-cover border-4 border-black">
+                <img src="portrait.jpg" alt="Matthias Kriegleder" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover object-top border-4 border-black shadow-lg">
             </div>
 
-            <!-- Philosophie Section -->
-            <div class="bg-white border border-black rounded-lg p-8 text-center">
-                <h2 class="text-4xl font-bold mb-6">Philosophie</h2>
-                <div class="space-y-4 text-gray-800">
+            <div class="bg-white border border-black rounded-lg p-6 md:p-8 text-center shadow-sm">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Philosophie</h2>
+                <div class="space-y-4 text-gray-800 text-sm md:text-base leading-relaxed">
                     <p>
                         Ein aktiver therapeutischer Ansatz ist für mich ein Hauptmerkmal einer sinnvollen Therapie. Ich bin überzeugt, dass passive Maßnahmen als Unterstützung sehr hilfreich sein können, jedoch der beste Weg zur Überwindung von Beschwerden durch eine aktive, individuell angepasste Therapie führt.
                     </p>
                 </div>
             </div>
 
-            <!-- Schwerpunkte Section -->
-            <div class="bg-white border border-black rounded-lg p-8 text-center">
-                <h2 class="text-4xl font-bold mb-6">Schwerpunkte</h2>
-                <div class="space-y-6">
-                    <!-- Rehabilitation -->
+            <div class="bg-white border border-black rounded-lg p-6 md:p-8 text-center shadow-sm">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Schwerpunkte</h2>
+                <div class="space-y-8">
                     <div>
-                        <h3 class="text-2xl font-bold mb-4">Rehabilitation</h3>
-                        <ul class="space-y-2 text-gray-800">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4">Rehabilitation</h3>
+                        <ul class="space-y-2 text-gray-800 text-sm md:text-base inline-block text-left">
                             <li>- Nach Operationen</li>
                             <li>- Konservative Behandlungsmethoden</li>
                             <li>- Chronische Überlastungserscheinungen (insb. Nacken/Schulter, Rücken, Hüfte & Knie)</li>
                         </ul>
                     </div>
-                    <!-- Sport -->
                     <div>
-                        <h3 class="text-2xl font-bold mb-4">Sport</h3>
-                        <ul class="space-y-2 text-gray-800">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4">Sport</h3>
+                        <ul class="space-y-2 text-gray-800 text-sm md:text-base inline-block text-left">
                             <li>- Akute/chronische Sportverletzungen</li>
                             <li>- Überlastungserscheinungen im Sport</li>
                             <li>- Sportartspezifische Problematiken (insb. Kraftsport & Ballsport)</li>
@@ -85,17 +81,16 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-8 px-8 mt-auto">
-        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-4">
-            <div class="space-y-2">
+    <footer class="bg-black text-white py-8 px-4 md:px-8 mt-auto pb-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div class="space-y-2 text-sm">
                 <div>Tel: +43 681 207 284 81</div>
                 <div>E-mail: mk@derphysias.com</div>
-                <div>Copyright © 2026 - Matthias Kriegleder</div>
+                <div class="text-gray-400">Copyright © 2026 - Matthias Kriegleder</div>
             </div>
-            <div class="flex gap-6">
-                <a href="datenschutz.html" class="hover:opacity-80">DATENSCHUTZERKLÄRUNG</a>
-                <a href="impressum.html" class="hover:opacity-80">IMPRESSUM</a>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6 text-sm">
+                <a href="datenschutz.html" class="hover:opacity-80 transition-colors">DATENSCHUTZERKLÄRUNG</a>
+                <a href="impressum.html" class="hover:opacity-80 transition-colors">IMPRESSUM</a>
             </div>
         </div>
     </footer>
