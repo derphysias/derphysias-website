@@ -2,76 +2,72 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kontakt - MK Physiotherapie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        body { font-family: 'Inter', sans-serif; overscroll-behavior-y: none; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-black text-white py-6 px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+<body class="bg-gray-100 min-h-screen flex flex-col w-full overflow-x-hidden">
+    
+    <header class="bg-black text-white py-6 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-4xl font-bold">MK</div>
-            <nav class="flex gap-8">
-                <a href="index.html" class="hover:opacity-80">PHYSIOTHERAPIE</a>
-                <a href="kontakt.html" class="hover:opacity-80">KONTAKT</a>
-                <a href="infos.html" class="hover:opacity-80">INFORMATION</a>
+            <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base">
+                <a href="index.html" class="hover:opacity-80 transition-opacity">PHYSIOTHERAPIE</a>
+                <a href="kontakt.html" class="hover:opacity-80 transition-opacity">KONTAKT</a>
+                <a href="infos.html" class="hover:opacity-80 transition-opacity">INFORMATION</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow py-12 px-4">
+    <main class="flex-grow py-8 md:py-12 px-4">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-white border border-black rounded-lg p-8 text-center">
-                <h1 class="text-4xl font-bold mb-8">Kontakt</h1>
+            <div class="bg-white border border-black rounded-lg p-6 md:p-8 text-center shadow-sm">
+                <h1 class="text-3xl md:text-4xl font-bold mb-8">Kontakt</h1>
                 
-                <div class="space-y-6 text-gray-800 mb-12">
-                    <div>
-                        <p><strong>Email:</strong> mk@derphysias.com</p>
+                <div class="space-y-6 text-gray-800 mb-12 text-lg">
+                    <div class="bg-gray-50 p-4 rounded-lg inline-block w-full md:w-auto md:min-w-[300px]">
+                        <p><strong>Email:</strong> <a href="mailto:mk@derphysias.com" class="text-blue-600 hover:underline">mk@derphysias.com</a></p>
                     </div>
-                    <div>
-                        <p><strong>Tel:</strong> +43 681 207 284 81</p>
+                    <div class="bg-gray-50 p-4 rounded-lg inline-block w-full md:w-auto md:min-w-[300px]">
+                        <p><strong>Tel:</strong> <a href="tel:+4368120728481" class="text-blue-600 hover:underline">+43 681 207 284 81</a></p>
                     </div>
                 </div>
 
-                <h2 class="text-4xl font-bold mb-8">Standorte</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Standorte</h2>
                 
                 <div class="space-y-8 text-gray-800">
-                    <!-- Wien -->
                     <section>
-                        <h3 class="text-2xl font-bold mb-2">WIEN</h3>
-                        <p>- Rainergasse 29/7, 1040 Wien</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">WIEN</h3>
+                        <p class="text-lg">- Rainergasse 29/7, 1040 Wien</p>
+                        <a href="https://maps.google.com/?q=Rainergasse+29/7,1040+Wien" target="_blank" class="inline-block mt-2 text-sm text-gray-500 underline">Auf Karte zeigen</a>
                     </section>
 
-                    <!-- Wien - Umgebung -->
                     <section>
-                        <h3 class="text-2xl font-bold mb-2">WIEN - UMGEBUNG</h3>
-                        <p>- Bruno Ertler Gasse 2A, 2763 Pernitz</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-2">WIEN - UMGEBUNG</h3>
+                        <p class="text-lg">- Bruno Ertler Gasse 2A, 2763 Pernitz</p>
+                        <a href="https://maps.google.com/?q=Bruno+Ertler+Gasse+2A,2763+Pernitz" target="_blank" class="inline-block mt-2 text-sm text-gray-500 underline">Auf Karte zeigen</a>
                     </section>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-8 px-8 mt-auto">
-        <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap gap-4">
-            <div class="space-y-2">
+    <footer class="bg-black text-white py-8 px-4 md:px-8 mt-auto pb-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div class="space-y-2 text-sm">
                 <div>Tel: +43 681 207 284 81</div>
                 <div>E-mail: mk@derphysias.com</div>
-                <div>Copyright © 2026 - Matthias Kriegleder</div>
+                <div class="text-gray-400">Copyright © 2026 - Matthias Kriegleder</div>
             </div>
-            <div class="flex gap-6">
-                <a href="datenschutz.html" class="hover:opacity-80">DATENSCHUTZERKLÄRUNG</a>
-                <a href="impressum.html" class="hover:opacity-80">IMPRESSUM</a>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6 text-sm">
+                <a href="datenschutz.html" class="hover:opacity-80 transition-colors">DATENSCHUTZERKLÄRUNG</a>
+                <a href="impressum.html" class="hover:opacity-80 transition-colors">IMPRESSUM</a>
             </div>
         </div>
     </footer>
